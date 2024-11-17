@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Advanced Calculator</title>
+  <title>Advanced Calculator with History</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -35,8 +35,19 @@
       <button class="btn" onclick="appendNumber('0')">0</button>
       <button class="btn" onclick="appendNumber('.')">.</button>
       <button class="btn equals" onclick="calculate()">=</button>
+      <button class="btn" onclick="toggleHistory()">History</button>
     </div>
   </div>
+
+  <!-- Modal for History -->
+  <div id="historyModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" onclick="toggleHistory()">&times;</span>
+      <h2>Calculation History</h2>
+      <div id="historyList"></div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
